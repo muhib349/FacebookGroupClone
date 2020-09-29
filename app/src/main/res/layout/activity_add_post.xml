@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            app:title="Add New Post"
+            android:id="@+id/my_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:elevation="4dp"
+            android:theme="@style/toolbarThemeWhite"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+        <LinearLayout
+            android:padding="@dimen/dp_20"
+            android:orientation="vertical"
+            android:layout_below="@+id/my_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageSwitcher
+                android:visibility="visible"
+                android:id="@+id/imageSwitcher"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_250"/>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/dp_20"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:elevation="@dimen/dp_10"
+                    android:visibility="visible"
+                    android:id="@+id/ib_back"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/colorPrimary"
+                    android:src="@drawable/ic_arrow_back_white_24dp"
+                    android:layout_weight="0.2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+                <ImageButton
+                    android:elevation="@dimen/dp_10"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:id="@+id/ib_img_add"
+                    android:background="@color/colorPrimary"
+                    android:src="@drawable/ic_add_white_24dp"
+                    android:layout_weight="0.6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+
+                <ImageButton
+                    android:elevation="@dimen/dp_10"
+                    android:id="@+id/ib_next"
+                    android:visibility="visible"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:background="@color/colorPrimary"
+                    android:src="@drawable/ic_arrow_forward_white_24dp"
+                    android:layout_weight="0.2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+
+            <EditText
+                android:singleLine="true"
+                android:hint="Post Title"
+                android:inputType="textCapSentences"
+                android:id="@+id/et_title"
+                android:layout_marginTop="@dimen/dp_20"
+                android:background="@drawable/custome_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"/>
+
+            <EditText
+                android:inputType="text|textMultiLine|textCapSentences"
+                android:gravity="top"
+                android:hint="Post Description"
+                android:id="@+id/et_description"
+                android:layout_marginTop="@dimen/dp_20"
+                android:background="@drawable/custome_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"/>
+
+            <Button
+                android:id="@+id/btn_add_post"
+                android:clickable="true"
+                android:focusable="true"
+                android:elevation="@dimen/dp_10"
+                android:background="@color/colorPrimary"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="10dp"
+                android:text="Add post"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>
